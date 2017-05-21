@@ -51,3 +51,20 @@ new Vue({
 </script>
 ```
 [demo](https://jsfiddle.net/bonbonpa/kubpwt9h/)
+
+### sec 1-4 Course Structure
+
+About this Course
+
+- Gettting Started
+- Interacting with the DOM(template)
+- Understandibf the VueJS Instance
+- Vue CLI
+- Components
+- Forms
+- Directives, Filter & Mixins
+- Animations & Transitions
+- Working with Http
+- Routing
+- State Management
+- Deploying a VueJS App
