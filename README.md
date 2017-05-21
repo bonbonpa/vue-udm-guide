@@ -68,3 +68,12 @@ About this Course
 - Routing
 - State Management
 - Deploying a VueJS App
+
+### sec 1-5 Take Advantage of all Course Resources!
+
+Projects, Exercises, Code and Questions
+
+- 1st Project : Basics, Template Interaction
+- 2nd Project : Components
+- 3rd Project : Animations
+- 4th Project : Final Project (incl. Routing,State Management)
