@@ -2,7 +2,7 @@
 
 ## dvp-NotN : Vue.js the complete guide from udemy
 
-### Let's Create our First VueJS Application
+### Sec 1-2 : Let's Create our First VueJS Application
 
 [vuejs.org](https://vuejs.org/v2/guide/)
 
@@ -25,3 +25,29 @@ new Vue({
 });
 </script>
 ```
+### sec 1-3 Extending the VueJS Application
+
+```html
+<script src="https://unpkg.com/vue/dist/vue"></script>
+
+<div id="app">
+  <input type="text" v-on:input="changeTitle">
+  <p>{{title}}</p>  
+</div>
+
+<script type="text/javascript">
+new Vue({
+  el: '#app',
+  data: {
+  title: 'Hello bonbonpa'
+  },
+  methods: {
+    changeTitle:  function(event){
+      this.title = event.target.value;
+      // access to data
+    }
+  }
+});
+</script>
+```
+[demo](https://jsfiddle.net/bonbonpa/kubpwt9h/)
