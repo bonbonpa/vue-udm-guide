@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>VueJS sec 2-3</title>
+    <title>VueJS sec 2-4</title>
     <link rel="stylesheet" href="">
     <script src="../vue/vue.js"></script>
 </head>
@@ -25,8 +25,8 @@
             title: 'Hello bonbonpa'
         },
         methods: {
-            sayHello: function(event) {
-                return 'Hello !';
+            sayHello: function() {
+                return this.title; // access to properties
             }
         }
     });

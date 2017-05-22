@@ -167,3 +167,41 @@ can create <template></template>
 ```
 
 ### sec 2-4 Accessing Data in the Vue Instance
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-4</title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{ sayHello() }}</p>
+        <!--
+      exec function
+      call function in bracket
+    -->
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello bonbonpa'
+        },
+        methods: {
+            sayHello: function() {
+                return this.title; // access to properties
+            }
+        }
+    });
+</script>
+
+</html>
+```
