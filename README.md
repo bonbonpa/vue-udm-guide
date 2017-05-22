@@ -253,3 +253,57 @@ can create <template></template>
 ...
 
 ### Sec 2-7 Disable Re-Rendering with v-once
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-7 : Disable Re-Rendering with v-once
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <!-- 2-7: v-once update with 1 time -->
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <!-- con't use {{}} in atrributes'
+         v-bind something you wan bind
+         -->
+        <!--
+      exec function
+      call function in bracket
+    -->
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello bonbonpa',
+            link: 'http://google.com'
+        },
+        methods: {
+            sayHello: function() {
+                    this.title = "Hey bonbonpa dvp";
+                    return this.title; // access to properties
+                }
+                //2-7: Keep in mind : All usages of "title" get re-rendered once the property changes!
+        }
+    });
+</script>
+
+</html>
+```
+
+### 2-8 How to Output Raw HTML
+
+```html
+
+
+```
+
