@@ -126,3 +126,44 @@ DOM Interaction
 ### 2-2 Understanding VueJS template
 
 can create <template></template>
+
+### 2-3 How to VueJS Template Syntax and Instance Work Together
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>VueJS sec 2-3</title>
+  <link rel="stylesheet" href="">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-on:input="changeTitle">
+    <p>{{ sayHello() }}</p> <!--
+      exec function
+      call function in bracket
+    -->
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      title: 'Hello bonbonpa'
+    },
+    methods: {
+      sayHello: function(event) {
+        return 'Hello !';
+      }
+    }
+  });
+</script>
+
+</html>
+```
+
+### sec 2-4 Accessing Data in the Vue Instance
