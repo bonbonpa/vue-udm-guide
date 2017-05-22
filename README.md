@@ -249,3 +249,7 @@ can create <template></template>
 ```
 
 ### Sec 2-6 Understanding and Using Directives
+
+...
+
+### Sec 2-7 Disable Re-Rendering with v-once
