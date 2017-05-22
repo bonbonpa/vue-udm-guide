@@ -205,3 +205,47 @@ can create <template></template>
 
 </html>
 ```
+
+### sec 2-5 Binding to Attributes
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-5</title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <!-- con't use {{}} in atrributes' -->
+        <!--
+      exec function
+      call function in bracket
+    -->
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello bonbonpa',
+            link: 'http://google.com'
+        },
+        methods: {
+            sayHello: function() {
+                return this.title; // access to properties
+            }
+        }
+    });
+</script>
+
+</html>
+```
+
+### Sec 2-6 Understanding and Using Directives
