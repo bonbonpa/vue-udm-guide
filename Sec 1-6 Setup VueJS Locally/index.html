@@ -2,31 +2,31 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>VueJS sec 1-6</title>
-  <link rel="stylesheet" href="">
-  <script src="../vue/vue.js"></script>
+    <meta charset="utf-8">
+    <title>VueJS sec 1-6 : Setup VueJS Locally</title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <input type="text" v-on:input="changeTitle">
-    <p>{{title}}</p>
-  </div>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{title}}</p>
+    </div>
 </body>
 <script>
-  new Vue({
-    el: '#app',
-    data: {
-      title: 'Hello bonbonpa'
-    },
-    methods: {
-      changeTitle: function(event) {
-        this.title = event.target.value;
-        // access to data
-      }
-    }
-  });
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello bonbonpa'
+        },
+        methods: {
+            changeTitle: function(event) {
+                this.title = event.target.value;
+                // access to data
+            }
+        }
+    });
 </script>
 
 </html>
