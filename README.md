@@ -2,6 +2,8 @@
 
 ## dvp-NotN : Vue.js the complete guide from udemy
 
+## Section 1 : Getting Started
+### Sec 1-1 : Course Introduction
 ### Sec 1-2 : Let's Create our First VueJS Application
 
 [vuejs.org](https://vuejs.org/v2/guide/)
@@ -58,7 +60,7 @@ About this Course
 
 - Gettting Started
 - Interacting with the DOM(template)
-- Understandibf the VueJS Instance
+- Understanding the VueJS Instance
 - Vue CLI
 - Components
 - Forms
@@ -77,3 +79,50 @@ Projects, Exercises, Code and Questions
 - 2nd Project : Components
 - 3rd Project : Animations
 - 4th Project : Final Project (incl. Routing,State Management)
+
+### sec 1-6 Setup VueJS Locally
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>VueJS sec 1-6</title>
+  <link rel="stylesheet" href="">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-on:input="changeTitle">
+    <p>{{title}}</p>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      title: 'Hello bonbonpa'
+    },
+    methods: {
+      changeTitle: function(event) {
+        this.title = event.target.value;
+        // access to data
+      }
+    }
+  });
+</script>
+
+</html>
+```
+
+## Section 2 Using VueJS to Interact with the DOM
+
+### 2-1 : Module Introduction
+
+DOM Interaction
+
+### 2-2 Understanding VueJS template
+
+can create <template></template>
