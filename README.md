@@ -351,5 +351,6 @@ can create <template></template>
 </html>
 ```
 
+### Exercise 1
 
-
+[demo jsfiddle](https://jsfiddle.net/bonbonpa/jLyjaygf/)
