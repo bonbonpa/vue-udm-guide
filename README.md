@@ -95,11 +95,11 @@ Projects, Exercises, Code and Questions
 
 <body>
   <div id="app">
-    <input type="text" v-on:input="changeTitle">
+    <input type="text" v-on:input="changeTitle">  
     <p>{{title}}</p>
   </div>
 </body>
-<script>
+<script>  
   new Vue({
     el: '#app',
     data: {
@@ -140,7 +140,7 @@ can create <template></template>
   <script src="vue.js"></script>
 </head>
 
-<body>
+<body''>''
   <div id="app">
     <input type="text" v-on:input="changeTitle">
     <p>{{ sayHello() }}</p> <!--
@@ -148,7 +148,7 @@ can create <template></template>
       call function in bracket
     -->
   </div>
-</body>
+</body>[]
 <script>
   new Vue({
     el: '#app',
@@ -182,15 +182,15 @@ can create <template></template>
 <body>
     <div id="app">
         <input type="text" v-on:input="changeTitle">
-        <p>{{ sayHello() }}</p>
+        <p>{{ sayHello() }}</ p>
         <!--
       exec function
-      call function in bracket
-    -->
+      call function in bracket    7
+    -->1
     </div>
 </body>
-<script>
-    new Vue({
+  <script>                    
+    ne  w Vue({
         el: '#app',
         data: {
             title: 'Hello bonbonpa'
