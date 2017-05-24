@@ -383,6 +383,48 @@ new Vue({
 
 ### Sec 2-10 Getting Event Data from the Event Object
 
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-10 : Getting Event Data from the Event Object
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="increase">Click me</button>
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            increase: function() {
+                this.counter++;
+            },
+            updateCoordinates(event) {
+                this.x = event.clientX;
+                this.y = event.clientY;
+            }
+        }
+    });
+</script>
+
+</html>
+```
+
 ### Sec 2-11 Passing your own Arguments with Events
 
 ### Sec 2-12 Modifying an Event -w ith Event Modifiers

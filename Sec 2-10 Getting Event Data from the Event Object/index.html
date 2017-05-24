@@ -27,6 +27,10 @@
         methods: {
             increase: function() {
                 this.counter++;
+            },
+            updateCoordinates(event) {
+                this.x = event.clientX;
+                this.y = event.clientY;
             }
         }
     });
