@@ -14,7 +14,9 @@
         <button v-on:click="increase(2,$event)">Click me</button>
         <p>{{ counter }}</p>
         <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} -
-            <span v-on:mousemove="dummy">DEAD SHOT</span>
+            <!--<span v-on:mousemove="dummy">DEAD SHOT</span>-->
+            <span v-on:mousemove.stop.prevent="">DEAD SHOT</span>
+            <!-- v-on:mousemove.stop same stopPropagation() -->
         </p>
     </div>
 </body>
@@ -31,13 +33,14 @@
                 this.counter += step;
             },
             updateCoordinates: function(event) {
-                this.x = event.clientX;
-                this.y = event.clientY;
-            },
-            dummy: function(event) {
-                event.stopPropagation(); // stop event only elements
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                }
+                // ,
+                // dummy: function(event) {
+                //     event.stopPropagation(); // stop event only elements
 
-            }
+            // }
         }
     });
 </script>
