@@ -469,7 +469,7 @@ new Vue({
 </html>
 ```
 
-### Sec 2-12 Modifying an Event -w ith Event Modifiers
+### Sec 2-12 Modifying an Event - with Event Modifiers
 
 ### Sec 2-13 Listening to Keyboard Events
 
