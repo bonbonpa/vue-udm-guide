@@ -576,6 +576,62 @@ new Vue({
 ```
 ### Exercise 2 Time to Practice - Events
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 2 </title>
+    <script src="https://npmcdn.com/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+
+
+    <div id="exercise">
+        <!-- 1) Show an alert when the Button gets clicked -->
+        <div>
+            <button v-on:click="alertbtn">Show Alert</button>
+        </div>
+        <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
+        <div>
+            <input type="text" v-on:keydown="storeData">
+            <p>{{ value }}</p>
+        </div>
+        <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+        <div>
+            <input type="text" v-on:keydown.enter="storeData">
+            <p>{{ value }}</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#exercise',
+            data: {
+                value: ''
+            },
+            methods: {
+                alertbtn: function() {
+                    alert('Hello Vue');
+                },
+                storeData: function(event) {
+                    this.value = event.target.value;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+```
+
+## [demo](https://jsfiddle.net/bonbonpa/mu8ztsy0/)
+
 ### Sec 2-14 Writing JavaScript Code in the Template
 
 ### Sec 2-15 Using Two-Way-Binding
