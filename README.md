@@ -354,3 +354,70 @@ can create <template></template>
 ### Exercise 1
 
 [demo jsfiddle](https://jsfiddle.net/bonbonpa/jLyjaygf/)
+
+### Sec 2-9 Listening to Events
+
+```html
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+  <button v-on:click="increase">Click me</button>
+  <p>{{ counter }}</p>
+</div>
+<script>
+new Vue({
+	el: '#app',
+  data: {
+  	counter: 0
+  },
+  methods: {
+  	increase: function(){
+    	this.counter++;
+    }
+  }
+});
+</script>
+```
+
+## [demo](https://jsfiddle.net/7b59gqdz/1/)
+
+### Sec 2-10 Getting Event Data from the Event Object
+
+### Sec 2-11 Passing your own Arguments with Events
+
+### Sec 2-12 Modifying an Event -w ith Event Modifiers
+
+### Sec 2-13 Listening to Keyboard Events
+
+### Exercise 2 Time to Practice - Events
+
+### Sec 2-14 Writing JavaScript Code in the Template
+
+### Sec 2-15 Using Two-Way-Binding
+
+### Sec 2-16 Reacting to Changes with Computed Properties
+
+### Sec 2-17 An Alternative to Computed PropertiesL Watching for Changes
+
+### Sec 2-18 Saving Time with Shorthands
+
+### Exercise 3 Time to Practice - Reactive Properties
+
+### Sec 2-19 Dynamic Styling with CSS Classes-Basics
+
+### Sec 2-20 Dynamic Styling with CSS Classes-Using Names
+
+### Sec 2-21 Setting Styles Dynamically (without CSS Classes)
+
+### Sec 2-22 Styling Elements with the Array Syntax
+
+### Exercise 4 Time to Practice - Styling
+
+### Sec 2-23 Module Wrap Up
+
+### Sec 2-4 Module Resource & Useful Links
+
+-----
+
+
+
