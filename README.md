@@ -687,6 +687,35 @@ new Vue({
 ```
 ### Sec 2-15 Using Two-Way-Binding
 
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-15 Using Two-Way-Binding
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <p>{{ name }}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'bonbonpa'
+        }
+    });
+</script>
+
+</html>
+```
 ### Sec 2-16 Reacting to Changes with Computed Properties
 
 ### Sec 2-17 An Alternative to Computed PropertiesL Watching for Changes
