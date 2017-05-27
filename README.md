@@ -766,6 +766,61 @@ new Vue({
 ```
 ### Sec 2-17 An Alternative to Computed PropertiesL Watching for Changes
 
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-17 An Alternative to Computed PropertiesL Watching for Changes
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase Second</button>
+        <p> Counter : {{ counter }} | {{ secondCounter }}</p>
+        <p>Result : {{ result() }} | {{ output }}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            secondCounter: 0
+                // ,result: ''
+        },
+        computed: {
+            output: function() {
+                console.log('Computed');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+            }
+        },
+        watch: {
+            counter: function(value) {
+                var vm = this;
+                setTimeout(function() {
+                    vm.counter = 0;
+                }, 3000);
+            }
+        },
+        methods: { // for dom update for catch
+            result: function() {
+                console.log('method');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+            }
+        }
+    });
+</script>
+
+</html>
+```
+
 ### Sec 2-18 Saving Time with Shorthands
 
 ### Exercise 3 Time to Practice - Reactive Properties
@@ -786,5 +841,12 @@ new Vue({
 
 -----
 
+> Note : Known Options for Vue Instance
+
+- el: Connect to DOM 
+- data: Store Data to be use
+- methods: Methods of this Vue Instance
+- computed: Dependent Properties
+- watch: Execute code upon data changes
 
 
