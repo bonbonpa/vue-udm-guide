@@ -14,29 +14,29 @@
         <button v-on:click="counter++">Increase</button>
         <button v-on:click="counter--">Decrease</button>
         <button v-on:click="secondCounter++">Increase Second</button>
-        <p> Counter : {{ counter }}</p>
-        <p>Result : {{ result() }}</p>
+        <p> Counter : {{ counter }} | {{ secondCounter }}</p>
+        <p>Result : {{ result() }} | {{ output }}</p>
     </div>
 </body>
 <script>
     new Vue({
         el: '#app',
         data: {
-            counter: 0
+            counter: 0,
+            secondCounter: 0
                 // ,result: ''
         },
-        methods: {
-            result() {
-                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5'
+        computed: {
+            output: function() {
+                console.log('Computed');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
             }
-            // increase: function() {
-            //     this.counter++;
-            //     this.result = this.counter > 5 ? 'Greater 5' : 'Smaller 5';
-            // },
-            // decrease: function() {
-            //     this.counter--;
-            //     this.result = this.counter > 5 ? 'Greater 5' : 'Smaller 5';
-            // }
+        },
+        methods: { // for dom update for catch
+            result: function() {
+                console.log('method');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+            }
         }
     });
 </script>

@@ -718,6 +718,52 @@ new Vue({
 ```
 ### Sec 2-16 Reacting to Changes with Computed Properties
 
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-16 Reacting to Changes with Computed Properties
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase Second</button>
+        <p> Counter : {{ counter }} | {{ secondCounter }}</p>
+        <p>Result : {{ result() }} | {{ output }}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            secondCounter: 0
+                // ,result: ''
+        },
+        computed: {
+            output: function() {
+                console.log('Computed');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+            }
+        },
+        methods: { // for dom update for catch
+            result: function() {
+                console.log('method');
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+            }
+        }
+    });
+</script>
+
+</html>
+```
 ### Sec 2-17 An Alternative to Computed PropertiesL Watching for Changes
 
 ### Sec 2-18 Saving Time with Shorthands
