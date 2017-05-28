@@ -822,7 +822,40 @@ new Vue({
 ```
 
 ### Sec 2-18 Saving Time with Shorthands
+```html
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-18 Saving Time with Shorthands
+    </title>
+    <link rel="stylesheet" href="">
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="changeLink">Click to Change Link</button>
+        <a :href="link">Link</a>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            link: 'http://google.com'
+        },
+        methods: {
+            changeLink: function() {
+                this.link = 'http://apple.com'
+            }
+        }
+    });
+</script>
+
+</html>
+```
 ### Exercise 3 Time to Practice - Reactive Properties
 
 ### Sec 2-19 Dynamic Styling with CSS Classes-Basics
